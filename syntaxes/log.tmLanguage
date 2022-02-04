@@ -63,6 +63,15 @@
 				<string>markup.changed log.debug</string>
 			</dict>
 
+			<!-- Zephyr DEBUG -->
+			<dict>
+				<key>match</key>
+				<string>(?i)<(debug|dbug|dbg|de|d)></string>
+
+				<key>name</key>
+				<string>markup.changed log.debug</string>
+			</dict>
+
 			<!-- Android logcat Debug -->
 			<dict>
 				<key>match</key>
@@ -85,6 +94,15 @@
 			<dict>
 				<key>match</key>
 				<string>(?i)\[(information|info|inf|in|i)\]</string>
+
+				<key>name</key>
+				<string>markup.inserted log.info</string>
+			</dict>
+
+			<!-- Zephyr INFO -->
+			<dict>
+				<key>match</key>
+				<string>(?i)<(information|info|inf|in|i)></string>
 
 				<key>name</key>
 				<string>markup.inserted log.info</string>
@@ -117,6 +135,15 @@
 				<string>markup.deleted log.warning</string>
 			</dict>
 
+			<!-- Zephyr WARN -->
+			<dict>
+				<key>match</key>
+				<string>(?i)<(warning|warn|wrn|wn|w)></string>
+
+				<key>name</key>
+				<string>markup.deleted log.warning</string>
+			</dict>
+
 			<!-- Android logcat Warning -->
 			<dict>
 				<key>match</key>
@@ -139,6 +166,15 @@
 			<dict>
 				<key>match</key>
 				<string>(?i)\[(error|eror|err|er|e|fatal|fatl|ftl|fa|f)\]</string>
+
+				<key>name</key>
+				<string>string.regexp, strong log.error</string>
+			</dict>
+
+			<!-- Zephyr ERROR -->
+			<dict>
+				<key>match</key>
+				<string>\b(ZEPHYR FATAL ERROR)\b|(?i)<(error|eror|err|er|e|fatal|fatl|ftl|fa|f)></string>
 
 				<key>name</key>
 				<string>string.regexp, strong log.error</string>
@@ -171,10 +207,10 @@
 				<string>comment log.date</string>
 			</dict>
 
-			<!-- Clock times with optional timezone ("09:13:16", "09:13:16.323", "09:13:16+01:00") -->
+			<!-- Clock times with optional timezone ("09:13:16", "09:13:16.323", "09:13:16.323,123", "09:13:16+01:00") -->
 			<dict>
 				<key>match</key>
-				<string>\d{1,2}:\d{2}(:\d{2}([.,]\d{1,})?)?(Z| ?[+-]\d{1,2}:\d{2})?\b</string>
+				<string>\d{1,2}:\d{2}(:\d{2}([.,]\d{1,})?([.,]\d{1,})?)?(Z| ?[+-]\d{1,2}:\d{2})?\b</string>
 
 				<key>name</key>
 				<string>comment log.date</string>
@@ -289,6 +325,15 @@
 
 				<key>name</key>
 				<string>constant.language log.constant</string>
+			</dict>
+
+			<!-- Zephyr boot message -->
+			<dict>
+				<key>match</key>
+				<string>(?<=[*]{3} )Booting Zephyr OS build[^*]*(?=  [*]{3})</string>
+
+				<key>name</key>
+				<string>markup.heading log.boot</string>
 			</dict>
 		</array>
 
