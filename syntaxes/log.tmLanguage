@@ -216,6 +216,24 @@
 				<string>constant.language log.constant</string>
 			</dict>
 
+			<!-- Hex constants -->
+			<dict>
+				<key>match</key>
+				<string>\b0x([0-9a-fA-F]+)\b</string>
+
+				<key>name</key>
+				<string>constant.language log.constant</string>
+			</dict>
+
+			<!-- Bin constants -->
+			<dict>
+				<key>match</key>
+				<string>\b0b([01]+)\b</string>
+
+				<key>name</key>
+				<string>constant.language log.constant</string>
+			</dict>
+
 			<!-- String constants -->
 			<dict>
 				<key>match</key>
