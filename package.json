@@ -2,23 +2,23 @@
 	"name": "LogFileHighlighter",
 	"displayName": "Log File Highlighter",
 	"icon": "content/appicon.png",
-	"description": "Adds color highlighting to log files to make it easier to follow the flow of log events and identify problems.",
+	"description": "Adds color highlighting to log files to make it easier to follow the flow of log events and identify problems. Fork from emilast's extension.",
 	"categories": [
 		"Other"
 	],
 	"license": "MIT",
-	"version": "2.14.0",
+	"version": "2.14.99-zephyr1",
 	"bugs": {
 		"url": "https://github.com/emilast/vscode-logfile-highlighter/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/emilast/vscode-logfile-highlighter.git"
+		"url": "https://github.com/petterssonandreas/vscode-logfile-highlighter.git"
 	},
 	"engines": {
 		"vscode": "^1.42.0"
 	},
-	"publisher": "emilast",
+	"publisher": "petterssonandreas",
 	"extensionKind": [
 		"ui",
 		"workspace"
